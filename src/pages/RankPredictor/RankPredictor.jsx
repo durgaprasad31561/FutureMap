@@ -1,21 +1,51 @@
 import React, { useState } from 'react'
 import './RankPredictor.css'
+import cutoffs from '../../data/cutoffs'
+import collegesData from '../Resources/data/colleges.json'
+import predictService from '../../services/predictService'
 
-const mockPredict = (values) => {
-  // Simple frontend-only stub: returns mock results based on rank
-  const rank = Number(values.rank) || 999999
-  let chance = 0
-  if (rank <= 100) chance = 95
-  else if (rank <= 1000) chance = 80
-  else if (rank <= 5000) chance = 50
-  else if (rank <= 20000) chance = 25
-  else chance = 5
+function computeChance(rank, closingRank) {
+  if (!closingRank || closingRank <= 0) return 5
+  const ratio = rank / closingRank
+  let chance = 5
+  if (ratio <= 1) {
+    chance = Math.round(80 + (1 - ratio) * 20)
+  } else if (ratio <= 1.5) {
+    chance = Math.round(50 - ((ratio - 1) / 0.5) * 30)
+  } else {
+    chance = Math.max(3, Math.round(15 - ((ratio - 1.5) / 4) * 10))
+  }
+  return Math.max(3, Math.min(98, chance))
+}
 
-  return [
-    { college: 'Example Institute of Tech', branch: values.branch || 'CSE', estChance: chance },
-    { college: 'National College of Engineering', branch: values.branch || 'ECE', estChance: Math.max(chance - 10, 3) },
-    { college: 'City College of Engineering', branch: values.branch || 'ME', estChance: Math.max(chance - 30, 1) },
-  ]
+function findPredictions({ rank, branch, state }) {
+  const r = Number(rank) || Infinity
+  const branchNorm = (branch || '').toLowerCase()
+  const stateNorm = (state || '').toLowerCase()
+
+  const matches = []
+  for (const c of cutoffs) {
+    if (branchNorm && !c.branch.toLowerCase().includes(branchNorm) && !branchNorm.includes(c.branch.toLowerCase())) continue
+    if (c.state !== 'All' && stateNorm && c.state.toLowerCase() !== stateNorm) continue
+
+    const college = (collegesData && collegesData.colleges || []).find(x => x.id === c.collegeId)
+    if (!college) continue
+
+    const closing = Number(c.closingRank) || Infinity
+    const est = computeChance(r, closing)
+
+    matches.push({
+      collegeId: college.id,
+      college: college.name,
+      branch: c.branch,
+      state: college.state || c.state,
+      closingRank: closing,
+      estChance: est,
+    })
+  }
+
+  matches.sort((a, b) => b.estChance - a.estChance || a.closingRank - b.closingRank)
+  return matches.slice(0, 12)
 }
 
 export default function RankPredictor({ user }) {
@@ -34,11 +64,17 @@ export default function RankPredictor({ user }) {
     setResults(null)
 
     try {
-      // Frontend-first stub: generate mock predictions
-      const res = mockPredict(form)
-      // simulate small delay
-      await new Promise((r) => setTimeout(r, 300))
-      setResults(res)
+      // Try backend first
+      const resp = await predictService.predictRank(form)
+      if (resp && resp.ok && resp.data) {
+        // Expect backend to return an array of predictions
+        setResults(Array.isArray(resp.data) ? resp.data : [])
+      } else {
+        // fallback to local cutoffs if backend unavailable
+        const res = findPredictions(form)
+        await new Promise((r) => setTimeout(r, 200))
+        setResults(res)
+      }
     } catch (err) {
       console.error(err)
       setResults([])
