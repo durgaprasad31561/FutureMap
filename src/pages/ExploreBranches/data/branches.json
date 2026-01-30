@@ -1,0 +1,232 @@
+{
+  "branches": [
+    {
+      "id": "cse",
+      "name": "Computer Science & Engineering",
+      "short": "CSE",
+      "icon": "💻",
+      "color": "#6366f1",
+      "description": "Software development, algorithms, databases, and system design.",
+      "subjects": ["Data Structures", "Algorithms", "DBMS", "OS", "Networking", "Web Dev"],
+      "codingIntensity": 95,
+      "difficulty": 85,
+      "salaryRange": "8-25 LPA",
+      "demandTrend": "Very High",
+      "jobRoles": ["Software Engineer", "Full Stack Developer", "DevOps Engineer", "ML Engineer"],
+      "companies": ["Google", "Amazon", "Microsoft", "Meta", "Apple"],
+      "skills": ["Programming", "Problem Solving", "System Design", "Data Structures"],
+      "timeline": [
+        { "year": 1, "focus": "Fundamentals", "subjects": ["C++/Java", "Discrete Math", "Digital Logic"] },
+        { "year": 2, "focus": "Core CS", "subjects": ["DBMS", "OS", "Data Structures", "Algorithms"] },
+        { "year": 3, "focus": "Specialization", "subjects": ["Web Dev", "ML", "Cloud Computing"] },
+        { "year": 4, "focus": "Advanced & Projects", "subjects": ["System Design", "Capstone Project", "Internship"] }
+      ],
+      "radarSkills": { "Coding": 95, "Math": 70, "Hardware": 20, "Theory": 80, "Practical": 90 }
+    },
+    {
+      "id": "ai_ds",
+      "name": "Artificial Intelligence & Data Science",
+      "short": "AI & DS",
+      "icon": "🤖",
+      "color": "#8b5cf6",
+      "description": "Machine learning, deep learning, data analytics, and AI applications.",
+      "subjects": ["ML", "Deep Learning", "Statistics", "Data Analytics", "NLP", "Computer Vision"],
+      "codingIntensity": 90,
+      "difficulty": 88,
+      "salaryRange": "9-30 LPA",
+      "demandTrend": "Extremely High",
+      "jobRoles": ["ML Engineer", "Data Scientist", "AI Researcher", "Analytics Engineer"],
+      "companies": ["Google", "Meta", "OpenAI", "Tesla", "Amazon"],
+      "skills": ["Python", "Statistics", "ML Algorithms", "Deep Learning", "Big Data"],
+      "timeline": [
+        { "year": 1, "focus": "Math Foundations", "subjects": ["Linear Algebra", "Calculus", "Probability"] },
+        { "year": 2, "focus": "ML Basics", "subjects": ["Statistics", "ML Fundamentals", "Python"] },
+        { "year": 3, "focus": "Advanced ML", "subjects": ["Deep Learning", "NLP", "Computer Vision"] },
+        { "year": 4, "focus": "Research & Projects", "subjects": ["Research Papers", "Capstone Project", "Industry Projects"] }
+      ],
+      "radarSkills": { "Coding": 90, "Math": 95, "Hardware": 10, "Theory": 90, "Practical": 85 }
+    },
+    {
+      "id": "ece",
+      "name": "Electronics & Communication Engineering",
+      "short": "ECE",
+      "icon": "📡",
+      "color": "#06b6d4",
+      "description": "Electronics, communication systems, signal processing, and embedded systems.",
+      "subjects": ["Digital Electronics", "Signals & Systems", "Communication", "VLSI", "Microcontrollers"],
+      "codingIntensity": 60,
+      "difficulty": 80,
+      "salaryRange": "7-20 LPA",
+      "demandTrend": "High",
+      "jobRoles": ["Embedded Engineer", "Hardware Engineer", "Signal Processing Engineer", "RF Engineer"],
+      "companies": ["Intel", "Qualcomm", "Broadcom", "Texas Instruments", "Samsung"],
+      "skills": ["Circuit Design", "Embedded C", "VLSI", "Signal Processing", "Hardware Design"],
+      "timeline": [
+        { "year": 1, "focus": "Fundamentals", "subjects": ["Basic Electronics", "Circuit Theory", "Digital Logic"] },
+        { "year": 2, "focus": "Core ECE", "subjects": ["Signals & Systems", "VLSI Basics", "Microcontrollers"] },
+        { "year": 3, "focus": "Specialization", "subjects": ["Communication Systems", "VLSI Design", "Embedded Systems"] },
+        { "year": 4, "focus": "Advanced & Projects", "subjects": ["RF Engineering", "IoT Projects", "Capstone"] }
+      ],
+      "radarSkills": { "Coding": 60, "Math": 80, "Hardware": 90, "Theory": 85, "Practical": 80 }
+    },
+    {
+      "id": "mechanical",
+      "name": "Mechanical Engineering",
+      "short": "Mechanical",
+      "icon": "⚙️",
+      "color": "#ef4444",
+      "description": "Design, thermodynamics, fluid mechanics, and manufacturing processes.",
+      "subjects": ["Thermodynamics", "Fluid Mechanics", "CAD", "Manufacturing", "Mechanics of Materials"],
+      "codingIntensity": 40,
+      "difficulty": 75,
+      "salaryRange": "6-18 LPA",
+      "demandTrend": "Moderate-High",
+      "jobRoles": ["Mechanical Design Engineer", "Thermal Engineer", "Manufacturing Engineer", "Robotics Engineer"],
+      "companies": ["Bosch", "Hindustan Motors", "Maruti Suzuki", "Mahindra", "Siemens"],
+      "skills": ["CAD/CAM", "Thermodynamics", "Manufacturing", "Problem Solving", "Project Management"],
+      "timeline": [
+        { "year": 1, "focus": "Fundamentals", "subjects": ["Engineering Mechanics", "Materials Science", "Basic CAD"] },
+        { "year": 2, "focus": "Core Mechanics", "subjects": ["Thermodynamics", "Fluid Mechanics", "Mechanics of Materials"] },
+        { "year": 3, "focus": "Specialization", "subjects": ["CAD/CAM", "Manufacturing", "Heat Transfer"] },
+        { "year": 4, "focus": "Design & Projects", "subjects": ["Machine Design", "Capstone Project", "Industrial Projects"] }
+      ],
+      "radarSkills": { "Coding": 40, "Math": 85, "Hardware": 85, "Theory": 80, "Practical": 85 }
+    },
+    {
+      "id": "civil",
+      "name": "Civil Engineering",
+      "short": "Civil",
+      "icon": "🏗️",
+      "color": "#f97316",
+      "description": "Structures, construction, geotechnics, and infrastructure design.",
+      "subjects": ["Structural Analysis", "Foundation Engineering", "Highway Engineering", "Water Resources"],
+      "codingIntensity": 30,
+      "difficulty": 70,
+      "salaryRange": "5-15 LPA",
+      "demandTrend": "Moderate",
+      "jobRoles": ["Structural Engineer", "Construction Engineer", "Geotechnical Engineer", "Site Engineer"],
+      "companies": ["L&T", "Ircon", "NTPC", "RITES", "Godrej"],
+      "skills": ["Structural Design", "Site Management", "AutoCAD", "Analysis", "Sustainability"],
+      "timeline": [
+        { "year": 1, "focus": "Foundations", "subjects": ["Surveying", "Engineering Geology", "Basic Structural"] },
+        { "year": 2, "focus": "Core Civil", "subjects": ["Structural Analysis", "Geotechnics", "Hydraulics"] },
+        { "year": 3, "focus": "Specialization", "subjects": ["Bridge Engineering", "Water Resources", "Highway Engg"] },
+        { "year": 4, "focus": "Projects & Design", "subjects": ["Structural Design Project", "Site Practice", "Capstone"] }
+      ],
+      "radarSkills": { "Coding": 30, "Math": 80, "Hardware": 70, "Theory": 75, "Practical": 80 }
+    },
+    {
+      "id": "electrical",
+      "name": "Electrical Engineering",
+      "short": "Electrical",
+      "icon": "⚡",
+      "color": "#eab308",
+      "description": "Power systems, electromagnetism, circuit design, and renewable energy.",
+      "subjects": ["Power Systems", "Electrical Machines", "Power Electronics", "Control Systems"],
+      "codingIntensity": 45,
+      "difficulty": 78,
+      "salaryRange": "6-18 LPA",
+      "demandTrend": "High",
+      "jobRoles": ["Power Engineer", "Electrical Design Engineer", "Grid Engineer", "Solar Engineer"],
+      "companies": ["NTPC", "Power Grid", "Siemens", "ABB", "Schneider Electric"],
+      "skills": ["Circuit Design", "Power Systems", "Renewable Energy", "Control Theory", "Simulation"],
+      "timeline": [
+        { "year": 1, "focus": "Basics", "subjects": ["Circuit Theory", "Electromagnetics", "Basic Electrical"] },
+        { "year": 2, "focus": "Core Electrical", "subjects": ["Machines", "Power Electronics", "Control Systems"] },
+        { "year": 3, "focus": "Specialization", "subjects": ["Power Systems", "Renewable Energy", "High Voltage"] },
+        { "year": 4, "focus": "Advanced & Projects", "subjects": ["Smart Grids", "Capstone Project", "Internship"] }
+      ],
+      "radarSkills": { "Coding": 45, "Math": 85, "Hardware": 90, "Theory": 85, "Practical": 80 }
+    },
+    {
+      "id": "aerospace",
+      "name": "Aerospace Engineering",
+      "short": "Aerospace",
+      "icon": "🚀",
+      "color": "#3b82f6",
+      "description": "Aircraft design, aerodynamics, propulsion, and space technology.",
+      "subjects": ["Aerodynamics", "Aircraft Design", "Propulsion", "Structures", "Flight Mechanics"],
+      "codingIntensity": 65,
+      "difficulty": 90,
+      "salaryRange": "8-22 LPA",
+      "demandTrend": "Very High",
+      "jobRoles": ["Aerospace Engineer", "Propulsion Engineer", "Flight Test Engineer", "Structural Engineer"],
+      "companies": ["HAL", "DRDO", "Airbus", "Boeing", "SpaceX"],
+      "skills": ["Aerodynamics", "CFD", "CATIA", "Flight Mechanics", "Propulsion Systems"],
+      "timeline": [
+        { "year": 1, "focus": "Foundations", "subjects": ["Thermodynamics", "Fluid Mechanics", "Engineering Mechanics"] },
+        { "year": 2, "focus": "Core Aero", "subjects": ["Aerodynamics", "Flight Mechanics", "Propulsion Basics"] },
+        { "year": 3, "focus": "Specialization", "subjects": ["Aircraft Design", "Structures", "CFD"] },
+        { "year": 4, "focus": "Advanced Projects", "subjects": ["Design Project", "Flight Testing", "Capstone"] }
+      ],
+      "radarSkills": { "Coding": 65, "Math": 90, "Hardware": 85, "Theory": 90, "Practical": 85 }
+    }
+  ],
+  "quizQuestions": [
+    {
+      "id": 1,
+      "question": "What excites you more?",
+      "options": [
+        { "text": "Building software & apps", "weight": { "cse": 40, "ai_ds": 30, "mechanical": 5 } },
+        { "text": "Designing hardware & circuits", "weight": { "ece": 40, "electrical": 30 } },
+        { "text": "Analyzing data & patterns", "weight": { "ai_ds": 40, "cse": 20 } },
+        { "text": "Building physical machines", "weight": { "mechanical": 40, "aerospace": 30 } }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Your ideal work environment?",
+      "options": [
+        { "text": "Tech companies & startups", "weight": { "cse": 40, "ai_ds": 35 } },
+        { "text": "Manufacturing & heavy industry", "weight": { "mechanical": 40, "civil": 30 } },
+        { "text": "Power & energy sector", "weight": { "electrical": 40, "aerospace": 20 } },
+        { "text": "Construction & infrastructure", "weight": { "civil": 40, "mechanical": 20 } }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Strong in which subject?",
+      "options": [
+        { "text": "Math & Programming", "weight": { "cse": 40, "ai_ds": 40 } },
+        { "text": "Physics & Practical work", "weight": { "ece": 35, "electrical": 35 } },
+        { "text": "Mechanics & Design", "weight": { "mechanical": 40, "aerospace": 35 } },
+        { "text": "All-rounder", "weight": { "civil": 30, "electrical": 25, "mechanical": 25 } }
+      ]
+    }
+  ],
+  "skillsData": {
+    "categories": ["Coding", "Math", "Hardware", "Theory", "Practical"]
+  },
+  "alumniStories": [
+    {
+      "id": 1,
+      "name": "Arjun Sharma",
+      "branch": "CSE",
+      "company": "Google",
+      "role": "Senior Software Engineer",
+      "story": "Started with web dev basics, learned system design, got into Google after 3 internships.",
+      "salary": "22 LPA",
+      "current": true
+    },
+    {
+      "id": 2,
+      "name": "Priya Patel",
+      "branch": "AI & DS",
+      "company": "Meta",
+      "role": "ML Engineer",
+      "story": "Passionate about AI, completed Kaggle competitions, now working on recommendation systems.",
+      "salary": "25 LPA",
+      "current": true
+    },
+    {
+      "id": 3,
+      "name": "Rohan Kumar",
+      "branch": "Aerospace",
+      "company": "HAL",
+      "role": "Design Engineer",
+      "story": "Loves aircraft design, published 2 papers, leading a UAV project team.",
+      "salary": "18 LPA",
+      "current": true
+    }
+  ]
+}

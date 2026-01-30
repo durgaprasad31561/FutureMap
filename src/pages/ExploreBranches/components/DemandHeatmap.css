@@ -1,0 +1,257 @@
+.demand-heatmap {
+  margin: 2rem 0;
+}
+
+.heatmap-container {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.heatmap-table {
+  display: grid;
+  grid-template-columns: 150px repeat(5, 1fr);
+  gap: 0;
+  background: white;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.heatmap-header {
+  display: contents;
+}
+
+.heatmap-header > * {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(59, 130, 246, 0.1));
+  border-bottom: 2px solid rgba(124, 58, 237, 0.2);
+  padding: 1rem 0.75rem;
+  text-align: center;
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.85rem;
+}
+
+.heatmap-label {
+  border-right: 1px solid rgba(124, 58, 237, 0.1);
+  text-align: left;
+  padding-left: 1rem !important;
+}
+
+.heatmap-sector-header {
+  border-right: 1px solid rgba(124, 58, 237, 0.1);
+}
+
+.heatmap-sector-header:last-child {
+  border-right: none;
+}
+
+.heatmap-row {
+  display: contents;
+}
+
+.heatmap-branch-name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  border-right: 1px solid rgba(124, 58, 237, 0.1);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+  background: white;
+  font-size: 0.95rem;
+}
+
+.heatmap-branch-name {
+  position: relative;
+  z-index: 20; /* keep branch names above hover-scaled cells */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.heatmap-branch-name span:last-child {
+  display: inline-block;
+  max-width: calc(100% - 48px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.branch-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.heatmap-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0.75rem;
+  border-right: 1px solid rgba(124, 58, 237, 0.1);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 600;
+  font-size: 0.85rem;
+  min-height: 60px;
+  z-index: 5; /* ensure branch name (z-index:20) stays on top */
+  overflow: hidden;
+}
+
+.heatmap-cell:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+  z-index: 8;
+}
+
+.heatmap-cell:last-child {
+  border-right: none;
+}
+
+.heatmap-legend {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.05), rgba(59, 130, 246, 0.05));
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.legend-title {
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.legend-box {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  flex-shrink: 0;
+}
+
+.heatmap-insights {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(59, 130, 246, 0.1));
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.heatmap-insights h3 {
+  margin-top: 0;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.insight-card {
+  background: white;
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.insight-card:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.1);
+}
+
+.insight-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.insight-card h4 {
+  color: #1f2937;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.insight-card p {
+  color: #6b7280;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .heatmap-table {
+    grid-template-columns: 100px repeat(5, 1fr);
+  }
+
+  .heatmap-header > *,
+  .heatmap-cell {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.75rem;
+    min-height: 50px;
+  }
+
+  .heatmap-branch-name {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .branch-icon {
+    font-size: 1.2rem;
+  }
+
+  .legend-items {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heatmap-insights {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heatmap-table {
+    grid-template-columns: 80px repeat(5, 1fr);
+  }
+
+  .heatmap-header > *,
+  .heatmap-cell {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.65rem;
+    min-height: 45px;
+  }
+
+  .heatmap-branch-name {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.7rem;
+  }
+}

@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import Landing from './pages/Landing/Landing'
@@ -15,6 +15,17 @@ import ProfilePending from './pages/ProfilePending/ProfilePending'
 import ProfileForm from './pages/ProfileForm/ProfileForm'
 import Dashboard from './pages/Dashboard/Dashboard'
 import CareerDetails from './pages/CareerDetails/CareerDetails'
+
+// Scroll to top component
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  
+  return null
+}
 
 function AppContent() {
   const navigate = useNavigate()
@@ -68,16 +79,17 @@ function AppContent() {
 
   return (
     <div className="App">
-      <Navbar user={user} />
+      <Navbar user={user} onLogout={() => setUser(null)} />
+      <ScrollToTop />
       <Routes>
-        <Route path="/how-it-works" element={<ProtectedRoute user={user}><HowItWorks /></ProtectedRoute>} />
+        <Route path="/how-it-works" element={<HowItWorks user={user} />} />
         <Route path="/branches" element={<ProtectedRoute user={user}><ExploreBranches /></ProtectedRoute>} />
-        <Route path="/career-paths" element={<ProtectedRoute user={user}><CareerPaths /></ProtectedRoute>} />
+        <Route path="/career-paths" element={<ProtectedRoute user={user}><CareerPaths profileComplete={profileComplete} /></ProtectedRoute>} />
         <Route path="/roadmaps" element={<ProtectedRoute user={user}><Roadmaps /></ProtectedRoute>} />
         <Route path="/resources" element={<ProtectedRoute user={user}><Resources /></ProtectedRoute>} />
         <Route path="/about" element={<ProtectedRoute user={user}><About /></ProtectedRoute>} />
         <Route path="/contact" element={<ProtectedRoute user={user}><Contact /></ProtectedRoute>} />
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Landing user={user} />} />
         <Route 
           path="/auth" 
           element={
@@ -124,8 +136,10 @@ function AppContent() {
           element={
             user && profileComplete ? (
               <CareerDetails />
+            ) : user ? (
+              <Navigate to="/complete-profile" replace />
             ) : (
-              <Navigate to="/dashboard" replace />
+              <Navigate to="/" replace />
             )
           } 
         />

@@ -1,0 +1,231 @@
+.timeline {
+  padding: 2rem 0;
+}
+
+.timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg,
+    rgba(124, 58, 237, 0.3) 0%,
+    rgba(124, 58, 237, 0.1) 100%);
+  pointer-events: none;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.timeline-dot {
+  position: relative;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  border: 3px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+  z-index: 5;
+}
+
+.timeline-dot:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+}
+
+.timeline-dot.active {
+  box-shadow: 0 0 30px rgba(124, 58, 237, 0.4);
+  background: linear-gradient(135deg, #6d28d9, #7c3aed);
+}
+
+.dot-number {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.timeline-content {
+  flex: 1;
+  padding-top: 0.5rem;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(59, 130, 246, 0.1));
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.timeline-header:hover {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(59, 130, 246, 0.15));
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+.timeline-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+.expand-icon {
+  color: #7c3aed;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.timeline-details {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: rgba(124, 58, 237, 0.05);
+  border-left: 3px solid #7c3aed;
+  border-radius: 8px;
+  animation: expandDown 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+@keyframes expandDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+  }
+}
+
+.timeline-description {
+  color: #374151;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  font-size: 0.95rem;
+}
+
+.timeline-subjects {
+  margin: 0.75rem 0;
+}
+
+.timeline-subjects h4 {
+  margin: 0 0 0.75rem 0;
+  color: #1f2937;
+  font-size: 0.9rem;
+}
+
+.subject-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.subject-chip {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.timeline-milestone {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 3px solid #10b981;
+  border-radius: 6px;
+  color: #047857;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.milestone-icon {
+  font-size: 1.1rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  width: 2px;
+  height: calc(100% + 1.5rem);
+  background: rgba(124, 58, 237, 0.1);
+  pointer-events: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .timeline-item {
+    gap: 1.25rem;
+  }
+
+  .timeline-dot {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .dot-number {
+    font-size: 1rem;
+  }
+
+  .timeline-header {
+    padding: 0.75rem;
+  }
+
+  .timeline-header h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-details {
+    padding: 0.75rem;
+  }
+
+  .timeline-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-container::before {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    width: 45px;
+    height: 45px;
+  }
+
+  .timeline-item {
+    gap: 1rem;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+}

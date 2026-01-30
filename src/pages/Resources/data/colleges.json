@@ -1,0 +1,686 @@
+{
+  "colleges": [
+    {
+      "id": "kl-university",
+      "name": "KL University",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='120' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>KL</text></svg>",
+      "city": "Vaddeswaram",
+      "state": "Andhra Pradesh",
+      "nirf_rank": 150,
+      "type": "Private",
+      "accreditation": "NAAC A",
+      "established": 1980,
+      "campus_size_acres": 200,
+      "student_intake": 6000,
+      "website": "https://www.kluniversity.in",
+      "fees": {
+        "tuition_annual": 300000,
+        "hostel_annual": 120000,
+        "mess_annual": 60000,
+        "total_annual": 480000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships available",
+        "financial_aid": "Financial aid programs",
+        "sports": "Sports scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "10.5 LPA",
+          "highest_package": "35 LPA",
+          "placement_percent": 85,
+          "recruiters": ["TCS", "Wipro", "Infosys", "Amazon"]
+        },
+        {
+          "stream": "Electronics & Communication",
+          "avg_package": "8.5 LPA",
+          "highest_package": "28 LPA",
+          "placement_percent": 80,
+          "recruiters": ["Qualcomm", "Samsung", "Intel"]
+        }
+      ],
+      "facilities": ["Modern labs", "Central library", "Hostels", "Sports complex"],
+      "placements_data": {
+        "2023": {"avg_salary": "9.8 LPA", "highest_salary": "32 LPA", "placement_percent": 84}
+      },
+      "sector_distribution": {"IT": 48, "Core": 30, "Finance": 12, "Others": 10}
+    },
+    {
+      "id": "kits-college",
+      "name": "KITS College",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='120' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>K</text></svg>",
+      "city": "Guntur",
+      "state": "Andhra Pradesh",
+      "nirf_rank": 220,
+      "type": "Private",
+      "accreditation": "NAAC B",
+      "established": 1995,
+      "campus_size_acres": 120,
+      "student_intake": 3000,
+      "website": "https://www.kits.edu.in",
+      "fees": {
+        "tuition_annual": 180000,
+        "hostel_annual": 80000,
+        "mess_annual": 40000,
+        "total_annual": 300000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships",
+        "financial_aid": "Need-based aid",
+        "sports": "Sports scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Mechanical Engineering",
+          "avg_package": "6.5 LPA",
+          "highest_package": "18 LPA",
+          "placement_percent": 70,
+          "recruiters": ["Larsen & Toubro", "Bosch", "Mahindra"]
+        },
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "7.8 LPA",
+          "highest_package": "22 LPA",
+          "placement_percent": 75,
+          "recruiters": ["Cognizant", "HCL", "Accenture"]
+        }
+      ],
+      "facilities": ["Labs", "Library", "Hostels"],
+      "placements_data": {
+        "2023": {"avg_salary": "7.0 LPA", "highest_salary": "20 LPA", "placement_percent": 73}
+      },
+      "sector_distribution": {"IT": 40, "Core": 35, "Others": 25}
+    },
+    {
+      "id": "iit-delhi",
+      "name": "Indian Institute of Technology Delhi",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>I</text></svg>",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "nirf_rank": 2,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1961,
+      "campus_size_acres": 85,
+      "student_intake": 1250,
+      "website": "https://www.iitd.ac.in",
+      "fees": {
+        "tuition_annual": 90000,
+        "hostel_annual": 100000,
+        "mess_annual": 60000,
+        "total_annual": 250000
+      },
+      "scholarships": {
+        "merit_based": "Up to 100% tuition waiver for SC/ST",
+        "financial_aid": "Up to 50% for EWS",
+        "sports": "Merit-based sports scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "22.5 LPA",
+          "highest_package": "98 LPA",
+          "placement_percent": 98,
+          "recruiters": ["Google", "Microsoft", "Amazon", "Goldman Sachs", "DE Shaw", "Flipkart", "Uber"]
+        },
+        {
+          "stream": "Electrical Engineering",
+          "avg_package": "18.5 LPA",
+          "highest_package": "68 LPA",
+          "placement_percent": 96,
+          "recruiters": ["Siemens", "ABB", "Power Grid", "NTPC", "Intel", "Cisco"]
+        },
+        {
+          "stream": "Mechanical Engineering",
+          "avg_package": "16.8 LPA",
+          "highest_package": "52 LPA",
+          "placement_percent": 94,
+          "recruiters": ["Mahindra", "Bajaj", "Maruti Suzuki", "Siemens", "Bosch", "Caterpillar"]
+        }
+      ],
+      "facilities": [
+        "State-of-the-art computing labs",
+        "Advanced research centers",
+        "Sports complex with Olympic-size pool",
+        "Central library with 200k+ books",
+        "Innovation and incubation hub",
+        "Hostel with modern amenities",
+        "Multi-cuisine dining facilities"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "21.5 LPA", "highest_salary": "95 LPA", "placement_percent": 97},
+        "2022": {"avg_salary": "20.8 LPA", "highest_salary": "90 LPA", "placement_percent": 96},
+        "2021": {"avg_salary": "19.5 LPA", "highest_salary": "88 LPA", "placement_percent": 95}
+      },
+      "sector_distribution": {"IT": 45, "Finance": 25, "Core": 20, "Others": 10}
+    },
+    {
+      "id": "iit-bombay",
+      "name": "Indian Institute of Technology Bombay",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>I</text></svg>",
+      "city": "Mumbai",
+      "state": "Maharashtra",
+      "nirf_rank": 3,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1958,
+      "campus_size_acres": 100,
+      "student_intake": 1200,
+      "website": "https://www.iitb.ac.in",
+      "fees": {
+        "tuition_annual": 90000,
+        "hostel_annual": 90000,
+        "mess_annual": 55000,
+        "total_annual": 235000
+      },
+      "scholarships": {
+        "merit_based": "Full tuition for top 20% merit students",
+        "financial_aid": "Up to 75% for below poverty line",
+        "sports": "Comprehensive sports scholarship program"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "23.2 LPA",
+          "highest_package": "105 LPA",
+          "placement_percent": 98,
+          "recruiters": ["Google", "Microsoft", "Amazon", "Facebook", "Uber", "Stripe"]
+        },
+        {
+          "stream": "Electrical Engineering",
+          "avg_package": "19.2 LPA",
+          "highest_package": "72 LPA",
+          "placement_percent": 97,
+          "recruiters": ["Siemens", "General Electric", "Cisco", "IBM", "Intel"]
+        }
+      ],
+      "facilities": [
+        "World-class computing infrastructure",
+        "Advanced nanotechnology lab",
+        "Entrepreneurship development cell",
+        "Sports complex",
+        "Lush green campus",
+        "High-speed internet across campus",
+        "State-of-the-art hostels"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "22.8 LPA", "highest_salary": "105 LPA", "placement_percent": 98},
+        "2022": {"avg_salary": "21.5 LPA", "highest_salary": "100 LPA", "placement_percent": 97}
+      },
+      "sector_distribution": {"IT": 50, "Finance": 22, "Core": 18, "Others": 10}
+    },
+    {
+      "id": "iit-madras",
+      "name": "Indian Institute of Technology Madras",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>I</text></svg>",
+      "city": "Chennai",
+      "state": "Tamil Nadu",
+      "nirf_rank": 4,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1959,
+      "campus_size_acres": 250,
+      "student_intake": 1400,
+      "website": "https://www.iitm.ac.in",
+      "fees": {
+        "tuition_annual": 85000,
+        "hostel_annual": 80000,
+        "mess_annual": 45000,
+        "total_annual": 210000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships for top performers",
+        "financial_aid": "Comprehensive financial aid program",
+        "research": "Research fellowships available"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "21.8 LPA",
+          "highest_package": "92 LPA",
+          "placement_percent": 97,
+          "recruiters": ["Google", "Microsoft", "Amazon", "Goldman Sachs", "Qualcomm", "Accenture"]
+        }
+      ],
+      "facilities": [
+        "Largest private library in India",
+        "Advanced computing facilities",
+        "Research park with 100+ companies",
+        "Olympic-size swimming pool",
+        "Entrepreneurship incubation center",
+        "Modern hostels with amenities"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "21.5 LPA", "highest_salary": "92 LPA", "placement_percent": 97}
+      },
+      "sector_distribution": {"IT": 48, "Finance": 24, "Core": 18, "Others": 10}
+    },
+    {
+      "id": "iit-kanpur",
+      "name": "Indian Institute of Technology Kanpur",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>I</text></svg>",
+      "city": "Kanpur",
+      "state": "Uttar Pradesh",
+      "nirf_rank": 5,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1959,
+      "campus_size_acres": 1000,
+      "student_intake": 800,
+      "website": "https://www.iitk.ac.in",
+      "fees": {
+        "tuition_annual": 90000,
+        "hostel_annual": 85000,
+        "mess_annual": 50000,
+        "total_annual": 225000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships available",
+        "financial_aid": "Financial aid for needy students",
+        "sports": "Sports scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "21.5 LPA",
+          "highest_package": "85 LPA",
+          "placement_percent": 96,
+          "recruiters": ["Google", "Microsoft", "Amazon", "Samsung", "Intel", "Apple"]
+        }
+      ],
+      "facilities": [
+        "Advanced research laboratories",
+        "High-performance computing center",
+        "Sports complex",
+        "Central library",
+        "Entrepreneurship cell",
+        "Modern hostel facilities"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "21.2 LPA", "highest_salary": "85 LPA", "placement_percent": 96}
+      },
+      "sector_distribution": {"IT": 46, "Finance": 24, "Core": 20, "Others": 10}
+    },
+    {
+      "id": "iit-kharagpur",
+      "name": "Indian Institute of Technology Kharagpur",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>I</text></svg>",
+      "city": "Kharagpur",
+      "state": "West Bengal",
+      "nirf_rank": 6,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1951,
+      "campus_size_acres": 2200,
+      "student_intake": 1900,
+      "website": "https://www.iitkgp.ac.in",
+      "fees": {
+        "tuition_annual": 90000,
+        "hostel_annual": 80000,
+        "mess_annual": 45000,
+        "total_annual": 215000
+      },
+      "scholarships": {
+        "merit_based": "Generous merit scholarships",
+        "financial_aid": "Financial aid for eligible students",
+        "international": "International exchange programs"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "20.8 LPA",
+          "highest_package": "88 LPA",
+          "placement_percent": 95,
+          "recruiters": ["Google", "Microsoft", "Amazon", "Flipkart", "TCS", "Infosys"]
+        }
+      ],
+      "facilities": [
+        "One of the largest campuses in Asia",
+        "Advanced computing centers",
+        "Research facilities",
+        "Sports complex",
+        "Central library",
+        "Modern hostels"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "20.5 LPA", "highest_salary": "88 LPA", "placement_percent": 95}
+      },
+      "sector_distribution": {"IT": 44, "Finance": 26, "Core": 20, "Others": 10}
+    },
+    {
+      "id": "iit-roorkee",
+      "name": "Indian Institute of Technology Roorkee",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>I</text></svg>",
+      "city": "Roorkee",
+      "state": "Uttarakhand",
+      "nirf_rank": 7,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1853,
+      "campus_size_acres": 360,
+      "student_intake": 1100,
+      "website": "https://www.iitr.ac.in",
+      "fees": {
+        "tuition_annual": 90000,
+        "hostel_annual": 75000,
+        "mess_annual": 45000,
+        "total_annual": 210000
+      },
+      "scholarships": {
+        "merit_based": "Merit-based scholarships",
+        "financial_aid": "Financial assistance available",
+        "research": "Research opportunities"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "19.5 LPA",
+          "highest_package": "80 LPA",
+          "placement_percent": 94,
+          "recruiters": ["Google", "Microsoft", "Amazon", "Cisco", "IBM", "Intel"]
+        }
+      ],
+      "facilities": [
+        "High-tech computing labs",
+        "Research centers",
+        "Sports facilities",
+        "Historical library",
+        "Innovation hub",
+        "Modern hostels"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "19.2 LPA", "highest_salary": "80 LPA", "placement_percent": 94}
+      },
+      "sector_distribution": {"IT": 42, "Finance": 28, "Core": 20, "Others": 10}
+    },
+    {
+      "id": "nit-trichy",
+      "name": "National Institute of Technology Trichy",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>N</text></svg>",
+      "city": "Trichy",
+      "state": "Tamil Nadu",
+      "nirf_rank": 8,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1964,
+      "campus_size_acres": 150,
+      "student_intake": 1800,
+      "website": "https://www.nitt.edu",
+      "fees": {
+        "tuition_annual": 150000,
+        "hostel_annual": 75000,
+        "mess_annual": 40000,
+        "total_annual": 265000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships up to 25% tuition",
+        "financial_aid": "Aid for economically weaker sections",
+        "sports": "Sports scholarships available"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "18.5 LPA",
+          "highest_package": "65 LPA",
+          "placement_percent": 95,
+          "recruiters": ["Infosys", "TCS", "Wipro", "Amazon", "Microsoft", "Cognizant"]
+        }
+      ],
+      "facilities": [
+        "Advanced computer labs",
+        "Research and development center",
+        "Sports complex",
+        "Central library with 150k+ books",
+        "Hostel with internet connectivity",
+        "Innovation labs"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "18.2 LPA", "highest_salary": "65 LPA", "placement_percent": 95}
+      },
+      "sector_distribution": {"IT": 42, "Finance": 28, "Core": 20, "Others": 10}
+    },
+    {
+      "id": "nit-rourkela",
+      "name": "National Institute of Technology Rourkela",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>N</text></svg>",
+      "city": "Rourkela",
+      "state": "Odisha",
+      "nirf_rank": 12,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1961,
+      "campus_size_acres": 500,
+      "student_intake": 1500,
+      "website": "https://www.nitrourkela.ac.in",
+      "fees": {
+        "tuition_annual": 140000,
+        "hostel_annual": 70000,
+        "mess_annual": 38000,
+        "total_annual": 248000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships",
+        "financial_aid": "Financial aid available",
+        "sports": "Sports scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "17.5 LPA",
+          "highest_package": "60 LPA",
+          "placement_percent": 93,
+          "recruiters": ["TCS", "Infosys", "Wipro", "Cognizant", "Accenture", "Tech Mahindra"]
+        }
+      ],
+      "facilities": [
+        "Modern computing labs",
+        "Research facilities",
+        "Sports complex",
+        "Central library",
+        "Incubation center",
+        "Hostel facilities"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "17.2 LPA", "highest_salary": "60 LPA", "placement_percent": 93}
+      },
+      "sector_distribution": {"IT": 40, "Finance": 30, "Core": 20, "Others": 10}
+    },
+    {
+      "id": "bits-pilani",
+      "name": "BITS Pilani",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>B</text></svg>",
+      "city": "Pilani",
+      "state": "Rajasthan",
+      "nirf_rank": 11,
+      "type": "Private",
+      "accreditation": "NAAC A+, NBA",
+      "established": 1972,
+      "campus_size_acres": 200,
+      "student_intake": 800,
+      "website": "https://www.bits-pilani.ac.in",
+      "fees": {
+        "tuition_annual": 750000,
+        "hostel_annual": 150000,
+        "mess_annual": 80000,
+        "total_annual": 980000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships up to 50% tuition",
+        "financial_aid": "Limited financial aid program",
+        "legacy": "Alumni child scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "20.5 LPA",
+          "highest_package": "78 LPA",
+          "placement_percent": 96,
+          "recruiters": ["Microsoft", "Google", "Amazon", "Goldman Sachs", "Samsung", "Oracle"]
+        }
+      ],
+      "facilities": [
+        "Wi-Fi enabled campus",
+        "State-of-the-art labs",
+        "Excellent placement support",
+        "International collaborations",
+        "Modern hostel infrastructure",
+        "Sports and recreation facilities"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "20.2 LPA", "highest_salary": "78 LPA", "placement_percent": 96}
+      },
+      "sector_distribution": {"IT": 52, "Finance": 20, "Core": 18, "Others": 10}
+    },
+    {
+      "id": "vit-vellore",
+      "name": "VIT Vellore",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>V</text></svg>",
+      "city": "Vellore",
+      "state": "Tamil Nadu",
+      "nirf_rank": 18,
+      "type": "Private",
+      "accreditation": "NAAC A+",
+      "established": 1984,
+      "campus_size_acres": 600,
+      "student_intake": 2000,
+      "website": "https://www.vit.ac.in",
+      "fees": {
+        "tuition_annual": 300000,
+        "hostel_annual": 120000,
+        "mess_annual": 60000,
+        "total_annual": 480000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships available",
+        "financial_aid": "Financial aid programs",
+        "sports": "Sports scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "16.5 LPA",
+          "highest_package": "55 LPA",
+          "placement_percent": 92,
+          "recruiters": ["Infosys", "TCS", "Wipro", "HCL", "Cognizant", "Accenture"]
+        }
+      ],
+      "facilities": [
+        "Advanced computing labs",
+        "Research centers",
+        "Sports facilities",
+        "Central library",
+        "Incubation center",
+        "Modern hostels"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "16.2 LPA", "highest_salary": "55 LPA", "placement_percent": 92}
+      },
+      "sector_distribution": {"IT": 45, "Finance": 25, "Core": 20, "Others": 10}
+    },
+    {
+      "id": "manipal-udupi",
+      "name": "Manipal University",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>M</text></svg>",
+      "city": "Udupi",
+      "state": "Karnataka",
+      "nirf_rank": 23,
+      "type": "Private",
+      "accreditation": "NAAC A+",
+      "established": 1953,
+      "campus_size_acres": 500,
+      "student_intake": 1800,
+      "website": "https://manipal.edu",
+      "fees": {
+        "tuition_annual": 280000,
+        "hostel_annual": 110000,
+        "mess_annual": 50000,
+        "total_annual": 440000
+      },
+      "scholarships": {
+        "merit_based": "Merit-based scholarships",
+        "financial_aid": "Financial aid available",
+        "sports": "Sports scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "16.0 LPA",
+          "highest_package": "52 LPA",
+          "placement_percent": 91,
+          "recruiters": ["Infosys", "TCS", "Wipro", "Amazon", "Cisco", "IBM"]
+        }
+      ],
+      "facilities": [
+        "Advanced labs",
+        "Research facilities",
+        "Sports complex",
+        "Central library",
+        "Innovation hub",
+        "Modern hostels"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "15.8 LPA", "highest_salary": "52 LPA", "placement_percent": 91}
+      },
+      "sector_distribution": {"IT": 44, "Finance": 26, "Core": 20, "Others": 10}
+    },
+    {
+      "id": "nsit-delhi",
+      "name": "Netaji Subhas University of Technology",
+      "logo": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><rect width='100%25' height='100%25' fill='%237c3aed'/><text x='50%25' y='55%25' font-size='180' fill='white' text-anchor='middle' font-family='Arial' font-weight='700'>N</text></svg>",
+      "city": "New Delhi",
+      "state": "Delhi",
+      "nirf_rank": 30,
+      "type": "Government",
+      "accreditation": "NBA, AICTE",
+      "established": 1983,
+      "campus_size_acres": 32,
+      "student_intake": 600,
+      "website": "https://www.nsit.ac.in",
+      "fees": {
+        "tuition_annual": 100000,
+        "hostel_annual": 60000,
+        "mess_annual": 30000,
+        "total_annual": 190000
+      },
+      "scholarships": {
+        "merit_based": "Merit scholarships",
+        "financial_aid": "Financial aid",
+        "sports": "Sports scholarships"
+      },
+      "streams": [
+        {
+          "stream": "Computer Science & Engineering",
+          "avg_package": "17.5 LPA",
+          "highest_package": "62 LPA",
+          "placement_percent": 94,
+          "recruiters": ["Google", "Microsoft", "Amazon", "Flipkart", "Goldman Sachs", "Morgan Stanley"]
+        }
+      ],
+      "facilities": [
+        "Advanced computing labs",
+        "Research facilities",
+        "Sports complex",
+        "Central library",
+        "Innovation hub",
+        "Hostel facilities"
+      ],
+      "placements_data": {
+        "2023": {"avg_salary": "17.2 LPA", "highest_salary": "62 LPA", "placement_percent": 94}
+      },
+      "sector_distribution": {"IT": 46, "Finance": 24, "Core": 20, "Others": 10}
+    }
+  ],
+  "states": [
+    "Delhi",
+    "Maharashtra",
+    "Tamil Nadu",
+    "Andhra Pradesh",
+    "Karnataka",
+    "Rajasthan",
+    "Uttar Pradesh",
+    "West Bengal",
+    "Uttarakhand",
+    "Odisha"
+  ]
+}

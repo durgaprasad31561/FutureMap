@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Landing.css'
 
-const Landing = () => {
+const Landing = ({ user }) => {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
 
@@ -24,20 +24,28 @@ const Landing = () => {
           </p>
 
           <div className="landing-buttons">
-            <button
-              className="btn btn-primary"
-              onClick={() => navigate('/auth')}
-              aria-label="Sign up"
-            >
-              Sign Up
-            </button>
-            <button
-              className="btn btn-outline"
-              onClick={() => navigate('/auth')}
-              aria-label="Login"
-            >
-              Login
-            </button>
+            {user ? (
+              <>
+                <button className="btn btn-primary" onClick={() => navigate('/dashboard')}>Dashboard</button>
+              </>
+            ) : (
+              <>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => navigate('/auth')}
+                  aria-label="Sign up"
+                >
+                  Sign Up
+                </button>
+                <button
+                  className="btn btn-outline"
+                  onClick={() => navigate('/auth')}
+                  aria-label="Login"
+                >
+                  Login
+                </button>
+              </>
+            )}
           </div>
         </div>
 
@@ -182,10 +190,14 @@ const Landing = () => {
         <div className="footer-inner">
           <div className="footer-copy">
             <h3>Ready to plan your future?</h3>
-            <p>Sign up and get your personalized roadmap in minutes.</p>
+            <p>{user ? 'Continue to your dashboard to view your personalized roadmap.' : 'Sign up and get your personalized roadmap in minutes.'}</p>
           </div>
           <div className="footer-action">
-            <button className="btn btn-primary" onClick={() => navigate('/auth')}>Get Started</button>
+            {user ? (
+              <button className="btn btn-primary" onClick={() => navigate('/dashboard')}>Go to Dashboard</button>
+            ) : (
+              <button className="btn btn-primary" onClick={() => navigate('/auth')}>Get Started</button>
+            )}
             <button className="btn btn-outline" onClick={() => navigate('/how-it-works')}>Learn More</button>
           </div>
         </div>

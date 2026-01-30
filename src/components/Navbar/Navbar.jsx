@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { NavLink, Link, useLocation } from 'react-router-dom'
+import { NavLink, Link, useLocation, useNavigate } from 'react-router-dom'
 import './Navbar.css'
 
 const NAV_ITEMS = [
@@ -7,14 +7,16 @@ const NAV_ITEMS = [
   { name: 'How It Works', to: '/how-it-works' },
   { name: 'Explore Branches', to: '/branches' },
   { name: 'Career Paths', to: '/career-paths' },
-  { name: 'Roadmaps', to: '/roadmaps' },
   { name: 'Resources', to: '/resources' },
 ]
 
-const Navbar = ({ user }) => {
+const Navbar = ({ user, onLogout }) => {
   const [open, setOpen] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
   const drawerRef = useRef(null)
+  const dropdownRef = useRef(null)
 
   // Close mobile drawer on route change
   useEffect(() => {
@@ -27,10 +29,22 @@ const Navbar = ({ user }) => {
       if (open && drawerRef.current && !drawerRef.current.contains(e.target)) {
         setOpen(false)
       }
+      if (dropdownOpen && dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false)
+      }
     }
     document.addEventListener('mousedown', handleClick)
     return () => document.removeEventListener('mousedown', handleClick)
-  }, [open])
+  }, [open, dropdownOpen])
+
+  const handleLogout = () => {
+    alert('Successfully logged out')
+    setDropdownOpen(false)
+    if (onLogout) {
+      onLogout()
+    }
+    navigate('/')
+  }
 
   return (
     <nav className="fm-navbar" role="navigation" aria-label="Main navigation">
@@ -55,12 +69,55 @@ const Navbar = ({ user }) => {
         </ul>
 
         <div className="fm-actions">
-          <NavLink to="/auth" className={({ isActive }) => 'fm-btn fm-btn-outline' + (isActive ? ' active' : '')} aria-label="Login">
-            Login
-          </NavLink>
-          <NavLink to="/auth" className="fm-btn fm-btn-primary" aria-label="Sign up">
-            Sign Up
-          </NavLink>
+          {user ? (
+            <div className="fm-user-menu" ref={dropdownRef}>
+              <button
+                className="fm-user-btn"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                aria-label="User menu"
+                aria-expanded={dropdownOpen}
+              >
+                <span className="fm-user-avatar">👤</span>
+                <span className="fm-user-name">{user.name || 'User'}</span>
+                <span className={`fm-dropdown-arrow ${dropdownOpen ? 'open' : ''}`}>▼</span>
+              </button>
+
+              {dropdownOpen && (
+                <div className="fm-dropdown-menu">
+                  <div className="fm-dropdown-item fm-dropdown-header">
+                    <strong>{user.name || 'User'}</strong>
+                  </div>
+
+                  <NavLink
+                    to="/dashboard"
+                    className="fm-dropdown-item fm-dropdown-link"
+                    onClick={() => setDropdownOpen(false)}
+                  >
+                    📊 Dashboard
+                  </NavLink>
+
+                  <div className="fm-dropdown-item fm-dropdown-progress">
+                    <span>Progress:</span>
+                    <div className="fm-progress-bar">
+                      <div className="fm-progress-fill" style={{ width: '45%' }} />
+                    </div>
+                    <span className="fm-progress-text">45%</span>
+                  </div>
+
+                  <button
+                    className="fm-dropdown-item fm-dropdown-logout"
+                    onClick={handleLogout}
+                  >
+                    🚪 Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <NavLink to="/auth" className={({ isActive }) => 'fm-btn fm-btn-outline' + (isActive ? ' active' : '')} aria-label="Login">
+              Login
+            </NavLink>
+          )}
         </div>
 
         <button
@@ -98,12 +155,21 @@ const Navbar = ({ user }) => {
         </ul>
 
         <div className="fm-mobile-actions">
-          <NavLink to="/auth" className="fm-btn fm-btn-outline" onClick={() => setOpen(false)}>
-            Login
-          </NavLink>
-          <NavLink to="/auth" className="fm-btn fm-btn-primary" onClick={() => setOpen(false)}>
-            Sign Up
-          </NavLink>
+          {user ? (
+            <div className="fm-mobile-user">
+              <div className="fm-mobile-user-name">{user.name || 'User'}</div>
+              <NavLink to="/dashboard" className="fm-btn fm-btn-outline" onClick={() => setOpen(false)}>
+                Dashboard
+              </NavLink>
+              <button className="fm-btn fm-btn-outline" onClick={handleLogout} style={{ width: '100%' }}>
+                Logout
+              </button>
+            </div>
+          ) : (
+            <NavLink to="/auth" className="fm-btn fm-btn-outline" onClick={() => setOpen(false)}>
+              Login
+            </NavLink>
+          )}
         </div>
       </div>
     </nav>

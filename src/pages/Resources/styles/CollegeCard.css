@@ -1,0 +1,341 @@
+/* College Card */
+.college-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.college-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(167, 139, 250, 0.4);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+}
+
+/* Card Header */
+.card-header {
+  position: relative;
+  height: 160px;
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.05) 10px,
+    rgba(255, 255, 255, 0.05) 20px
+  );
+  pointer-events: none;
+}
+
+.college-logo-wrapper {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.college-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.logo-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+}
+
+.college-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(10px);
+}
+
+.badge.govt {
+  background: rgba(34, 197, 94, 0.9);
+  color: white;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge.private {
+  background: rgba(59, 130, 246, 0.9);
+  color: white;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+/* Card Content */
+.card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.college-name {
+  color: #e6eefc;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.college-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.college-meta .city {
+  color: #c4b5fd;
+  margin: 0;
+}
+
+.college-meta .year {
+  color: #a3a3a3;
+  margin: 0;
+}
+
+/* College Stats */
+.college-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(167, 139, 250, 0.1);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.stat-value {
+  color: #a78bfa;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Accreditation */
+.accreditation {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.accred-badge {
+  background: rgba(167, 139, 250, 0.15);
+  color: #c4b5fd;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+/* Streams Preview */
+.streams-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.streams-label {
+  font-size: 0.8rem;
+  color: #999;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.streams-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.stream-tag {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.3), rgba(99, 102, 241, 0.3));
+  color: #c4b5fd;
+  padding: 0.35rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  display: inline-block;
+}
+
+/* View Details Button */
+.view-details-btn {
+  padding: 0.85rem 1.5rem;
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+  flex: 1;
+}
+
+.view-details-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+  background: linear-gradient(135deg, #6d28d9, #4f46e5);
+}
+
+.view-details-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .college-card {
+    border-radius: 12px;
+  }
+
+  .card-content {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .college-name {
+    font-size: 1rem;
+  }
+
+  .college-stats {
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .view-details-btn {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Selected State */
+.college-card.selected {
+  border-color: #a78bfa;
+  background: rgba(167, 139, 250, 0.15);
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+}
+
+/* Selected Indicator */
+.selected-indicator {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  z-index: 11;
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(167, 139, 250, 0.1);
+  margin-top: auto;
+}
+
+.compare-btn {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  background: rgba(99, 102, 241, 0.2);
+  color: #a78bfa;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.compare-btn:hover {
+  background: rgba(99, 102, 241, 0.3);
+  border-color: #a78bfa;
+}
+
+.compare-btn.selected {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-color: #10b981;
+}
+
+.compare-btn.selected:hover {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+}
+

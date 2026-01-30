@@ -1,3 +1,524 @@
-.page { padding: 3rem; }
-.page-center { max-width: 900px; margin: 2rem auto; color: #e6eefc }
-h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+/* Career Paths Page - Professional Styling */
+
+.career-paths {
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+  min-height: 100vh;
+  padding: 3rem 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.cp-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Section */
+.cp-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.cp-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.cp-title .lead {
+  font-size: 1.1rem;
+  color: #6b7280;
+  margin: 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Main Detail Section */
+.cp-detail {
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+/* Overview */
+.cp-overview {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.cp-overview h2 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cp-overview > .cp-desc {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.cp-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.cp-stats > div {
+  background: linear-gradient(135deg, #f0f9ff 0%, #f3e8ff 100%);
+  padding: 1.25rem;
+  border-radius: 12px;
+  border-left: 4px solid #7c3aed;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.cp-stats strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #7c3aed;
+  margin-top: 0.5rem;
+}
+
+/* Two-column layout */
+.cp-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.cp-column {
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.cp-column h3 {
+  font-size: 1.4rem;
+  color: #1f2937;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cp-column h4 {
+  font-size: 0.95rem;
+  color: #374151;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cp-column p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.cp-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cp-colleges {
+  margin-bottom: 1.5rem;
+}
+
+.cp-colleges li {
+  padding: 0.75rem 0;
+  padding-left: 1.5rem;
+  color: #374151;
+  font-size: 0.95rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.cp-colleges li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cp-curriculum {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style-position: inside;
+}
+
+.cp-curriculum li {
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  color: #374151;
+  line-height: 1.7;
+}
+
+.cp-curriculum li strong {
+  color: #1f2937;
+}
+
+.cp-curriculum li p {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+/* Study Guide Section */
+.cp-study-guide {
+  background: linear-gradient(135deg, #f0f9ff 0%, #f3e8ff 100%);
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.cp-study-guide h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.cp-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cp-guide-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #7c3aed;
+}
+
+.cp-guide-item h4 {
+  font-size: 1rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.cp-guide-item p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Resources Section */
+.cp-resources {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 2rem;
+}
+
+.cp-resources h3 {
+  font-size: 1.5rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.cp-res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.cp-res-grid > div {
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.cp-res-grid h4 {
+  font-size: 1rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cp-res-grid ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cp-res-grid li {
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.cp-res-grid li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #7c3aed;
+  font-weight: bold;
+}
+
+/* Action Buttons */
+.cp-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.cp-download-group {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.cp-primary,
+.cp-secondary {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: 0.3px;
+}
+
+.cp-primary {
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);
+  flex: 0 1 auto;
+  min-width: 250px;
+}
+
+.cp-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+}
+
+.cp-secondary {
+  background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+  color: white;
+  border: none;
+  flex: 0 1 auto;
+  min-width: 250px;
+  box-shadow: 0 4px 15px rgba(51, 65, 85, 0.2);
+}
+
+.cp-secondary:hover {
+  background: linear-gradient(135deg, #475569 0%, #334155 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(51, 65, 85, 0.3);
+}
+
+/* Grid Layout (no quiz results) */
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.cp-card {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #7c3aed;
+}
+
+.cp-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cp-icon {
+  font-size: 2.5rem;
+}
+
+.cp-card-header h3 {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin: 0;
+}
+
+.cp-card .cp-desc {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.cp-meta {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.cp-btn {
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.cp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+/* Empty State */
+.cp-empty {
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+/* Message Toast */
+.cp-message {
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .career-paths {
+    padding: 1.5rem 1rem;
+  }
+
+  .cp-detail {
+    padding: 1.5rem;
+  }
+
+  .cp-title h1 {
+    font-size: 2rem;
+  }
+
+  .cp-columns {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .cp-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cp-res-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cp-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cp-download-group {
+    flex-direction: column;
+  }
+
+  .cp-primary,
+  .cp-secondary {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .cp-actions {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cp-detail {
+    padding: 1rem;
+  }
+
+  .cp-title h1 {
+    font-size: 1.75rem;
+  }
+
+  .cp-title .lead {
+    font-size: 1rem;
+  }
+
+  .cp-overview h2 {
+    font-size: 1.5rem;
+  }
+
+  .cp-column h3 {
+    font-size: 1.2rem;
+  }
+
+  .cp-study-guide {
+    padding: 1.5rem;
+  }
+
+  .cp-resources {
+    padding: 1.5rem;
+  }
+
+  .cp-guide-item,
+  .cp-res-grid > div {
+    padding: 1rem;
+  }
+
+  .cp-stats > div {
+    padding: 1rem;
+  }
+}

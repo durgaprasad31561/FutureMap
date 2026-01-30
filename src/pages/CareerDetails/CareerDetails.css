@@ -1,51 +1,584 @@
+/* Career Details - Detailed Roadmap Page */
+
 .career-details-container {
-  min-height: calc(100vh - 80px);
-  padding: var(--spacing-xl);
-  background: var(--bg-secondary);
-  max-width: 1400px;
+  background: linear-gradient(135deg, #f8fafc 0%, #f0f4f8 100%);
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+}
+
+.cd-header {
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  color: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.cd-back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  margin-top: 0.5rem;
+}
+
+.cd-back-btn:hover {
+  background: white;
+  color: #7c3aed;
+  transform: translateX(-2px);
+}
+
+.cd-header-content {
+  flex: 1;
+}
+
+.cd-header-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.cd-header-content p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.cd-container {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.career-details-back {
-  background: var(--bg-primary);
-  border: 2px solid var(--primary-color);
-  color: var(--primary-color);
-  padding: 0.875rem 1.75rem;
-  border-radius: var(--radius-md);
-  font-size: 1rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all var(--transition-base);
-  margin-bottom: var(--spacing-lg);
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-xs);
-  box-shadow: var(--shadow-md);
-}
-
-.career-details-back:hover {
-  background: var(--primary-gradient);
+.cd-message {
+  background: #10b981;
   color: white;
-  transform: translateX(-5px);
-  box-shadow: var(--shadow-lg);
-}
-
-.career-details-error {
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
   text-align: center;
-  padding: var(--spacing-xl);
-  background: var(--bg-primary);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border-color);
+  font-weight: 600;
+  animation: slideDown 0.3s ease;
 }
 
-.career-details-hero {
-  background: var(--bg-primary);
-  border-radius: var(--radius-2xl);
-  padding: var(--spacing-xl);
-  margin-bottom: var(--spacing-lg);
-  box-shadow: var(--shadow-2xl);
-  border: 1px solid var(--border-color);
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Quick Stats */
+.cd-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cd-stat {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.cd-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.cd-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+/* Section Styling */
+.cd-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.cd-section h2 {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Roadmap Timeline */
+.cd-roadmap {
+  background: linear-gradient(135deg, #f0f9ff 0%, #f3e8ff 100%);
+}
+
+.cd-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.cd-timeline-item {
+  background: white;
+  border-left: 5px solid #7c3aed;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.cd-timeline-item:hover {
+  transform: translateX(4px);
+}
+
+.cd-timeline-marker {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #7c3aed;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+}
+
+.cd-timeline-item h3 {
+  font-size: 1.3rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.cd-courses {
+  margin-bottom: 1rem;
+}
+
+.cd-courses strong {
+  color: #374151;
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.cd-course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.cd-course-tag {
+  background: linear-gradient(135deg, #dbeafe 0%, #e9d5ff 100%);
+  color: #7c3aed;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.cd-activities {
+  color: #6b7280;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.cd-activities p {
+  margin: 0;
+}
+
+/* Two Column Layout */
+.cd-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.cd-col h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.cd-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cd-list li {
+  padding: 0.75rem 0;
+  padding-left: 1.75rem;
+  color: #374151;
+  font-size: 0.95rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.cd-check {
+  position: absolute;
+  left: 0;
+  color: #10b981;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Roles Grid */
+.cd-roles,
+.cd-companies {
+  display: grid;
+  gap: 1rem;
+}
+
+.cd-role-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #f3e8ff 100%);
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border-left: 4px solid #7c3aed;
+  font-size: 0.95rem;
+  color: #1f2937;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.cd-role-card:hover {
+  transform: translateX(4px);
+}
+
+.cd-role-icon {
+  color: #7c3aed;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.cd-company-badge {
+  background: white;
+  border: 2px solid #7c3aed;
+  color: #7c3aed;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cd-company-badge:hover {
+  background: #7c3aed;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Strategy Section */
+.cd-strategy {
+  background: linear-gradient(135deg, #f0f9ff 0%, #fef3c7 100%);
+}
+
+.cd-strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.cd-strategy-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #7c3aed;
+}
+
+.cd-strategy-item h4 {
+  font-size: 1rem;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.cd-strategy-item p {
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Resources Section */
+.cd-res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.cd-res-card {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.cd-res-card h3 {
+  font-size: 1.05rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.cd-res-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cd-res-card li {
+  padding: 0.5rem 0;
+  padding-left: 1.25rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.cd-res-card li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #7c3aed;
+  font-weight: bold;
+}
+
+/* Placement Section */
+.cd-placement {
+  background: linear-gradient(135deg, #f3e8ff 0%, #fce7f3 100%);
+}
+
+.cd-placement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.cd-placement-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+}
+
+.cd-placement-item h4 {
+  font-size: 1rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid #7c3aed;
+  padding-bottom: 0.75rem;
+}
+
+.cd-placement-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cd-placement-item li {
+  padding: 0.5rem 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.cd-placement-item li::before {
+  content: "✓ ";
+  color: #10b981;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* CTA Section */
+.cd-cta {
+  background: linear-gradient(135deg, #7c3aed 0%, #6366f1 100%);
+  color: white;
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+}
+
+.cd-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: white;
+}
+
+.cd-cta p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cd-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cd-btn-primary,
+.cd-btn-secondary {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.cd-btn-primary {
+  background: white;
+  color: #7c3aed;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cd-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cd-btn-secondary {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.cd-btn-secondary:hover {
+  background: white;
+  color: #7c3aed;
+  transform: translateY(-2px);
+}
+
+.cd-error {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  margin-top: 2rem;
+}
+
+.cd-error h2 {
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.cd-error p {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cd-header {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .cd-back-btn {
+    width: 100%;
+  }
+
+  .cd-section {
+    padding: 1.5rem;
+  }
+
+  .cd-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cd-timeline-item {
+    padding: 1.5rem;
+  }
+
+  .cd-course-list {
+    flex-direction: column;
+  }
+
+  .cd-strategy-grid,
+  .cd-res-grid,
+  .cd-placement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-cta-buttons {
+    flex-direction: column;
+  }
+
+  .cd-btn-primary,
+  .cd-btn-secondary {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cd-header {
+    padding: 1rem;
+  }
+
+  .cd-header-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .cd-section {
+    padding: 1rem;
+  }
+
+  .cd-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .cd-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .cd-timeline-item {
+    border-left-width: 4px;
+    padding: 1rem;
+  }
 }
 
 .career-details-header {
