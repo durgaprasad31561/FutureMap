@@ -8,6 +8,7 @@ const NAV_ITEMS = [
   { name: 'Explore Branches', to: '/branches' },
   { name: 'Career Paths', to: '/career-paths' },
   { name: 'Resources', to: '/resources' },
+    { name: 'Rank Predictor', to: '/rank-predictor' },
 ]
 
 const Navbar = ({ user, onLogout }) => {

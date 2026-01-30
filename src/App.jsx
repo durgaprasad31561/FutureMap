@@ -11,10 +11,12 @@ import Resources from './pages/Resources/Resources'
 import About from './pages/About/About'
 import Contact from './pages/Contact/Contact'
 import AuthForm from './pages/AuthForm/AuthForm'
+import authService from './services/authService'
 import ProfilePending from './pages/ProfilePending/ProfilePending'
 import ProfileForm from './pages/ProfileForm/ProfileForm'
 import Dashboard from './pages/Dashboard/Dashboard'
 import CareerDetails from './pages/CareerDetails/CareerDetails'
+import RankPredictor from './pages/RankPredictor/RankPredictor'
 
 // Scroll to top component
 function ScrollToTop() {
@@ -33,27 +35,61 @@ function AppContent() {
   const [profileComplete, setProfileComplete] = useState(false)
   const [userProfile, setUserProfile] = useState(null)
 
-  const handleLogin = (userData) => {
-    setUser(userData)
-    // Check if profile is complete (in real app, this would come from backend)
-    const isComplete = userData.profileComplete || false
-    setProfileComplete(isComplete)
-    // Load user profile if exists (in real app, from backend)
-    if (isComplete && userData.profile) {
-      setUserProfile(userData.profile)
-    }
-    // Navigate based on profile completion status
-    if (isComplete) {
-      navigate('/dashboard')
-    } else {
-      navigate('/profile-pending')
+  const handleLogin = async (userData) => {
+    // call backend login
+    try {
+      const resp = await authService.login({ email: userData.email, password: userData.password })
+      if (resp.ok) {
+        // try to get name from response data; fallback to provided name or email local-part
+        let name = userData.name || ''
+        if (!name && resp.data && typeof resp.data === 'object') {
+          name = resp.data.name || resp.data.username || resp.data.email || ''
+        }
+        if (!name && userData.email) {
+          name = userData.email.split('@')[0]
+        }
+
+        const appUser = { email: userData.email, name, profileComplete: false }
+        setUser(appUser)
+        setProfileComplete(false)
+        navigate('/profile-pending')
+      } else {
+        // fallback: still allow client-side demo login if backend not available
+        if (resp.ok) {
+          alert(resp.message)
+        } else {
+          alert('Login failed: ' + resp.message)
+        }
+      }
+    } catch (err) {
+      console.error(err)
+      alert('Login error: ' + err.message)
     }
   }
 
-  const handleSignup = (userData) => {
-    setUser(userData)
-    setProfileComplete(false)
-    navigate('/profile-pending')
+  const handleSignup = async (userData) => {
+    try {
+      const resp = await authService.signup({ name: userData.name, email: userData.email, phone: userData.phone, password: userData.password })
+      if (resp.ok) {
+        let name = userData.name || ''
+        if (!name && resp.data && typeof resp.data === 'object') {
+          name = resp.data.name || resp.data.username || resp.data.email || ''
+        }
+        const appUser = { email: userData.email, name, profileComplete: false }
+        setUser(appUser)
+        setProfileComplete(false)
+        navigate('/profile-pending')
+      } else {
+        if (resp.ok) {
+          alert(resp.message)
+        } else {
+          alert('Signup failed: ' + resp.message)
+        }
+      }
+    } catch (err) {
+      console.error(err)
+      alert('Signup error: ' + err.message)
+    }
   }
 
   const handleProfileComplete = (profileData) => {
@@ -143,6 +179,7 @@ function AppContent() {
             )
           } 
         />
+        <Route path="/rank-predictor" element={<RankPredictor user={user} />} />
       </Routes>
     </div>
   )

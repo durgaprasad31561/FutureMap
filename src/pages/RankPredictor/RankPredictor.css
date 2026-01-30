@@ -1,0 +1,23 @@
+.rm-predictor-page{padding:40px 16px;background:linear-gradient(180deg,#f4f8ff 0%, #ffffff 60%)}
+.rm-container{max-width:960px;margin:18px auto;background:linear-gradient(180deg,rgba(255,255,255,0.96),#fff);padding:28px;border-radius:14px;box-shadow:0 10px 30px rgba(13,38,76,0.08);border:1px solid rgba(11,105,255,0.06)}
+.rm-container h1{margin:0;font-size:26px;color:#08306b;letter-spacing:-0.2px}
+.rm-sub{color:#5b6b8a;margin-top:6px;margin-bottom:18px}
+.rm-form{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.rm-form label{display:flex;flex-direction:column;font-size:14px;color:#233049}
+.rm-form input,.rm-form select{padding:10px 12px;border:1px solid #e6eefc;border-radius:10px;background:#fbfdff;box-shadow:inset 0 1px 0 rgba(255,255,255,0.6)}
+.rm-form input::placeholder{color:#9aa6bf}
+.rm-actions{grid-column:1 / -1;margin-top:10px;display:flex;gap:12px}
+.rm-btn{background:linear-gradient(90deg,#0b69ff,#0066ff);color:#fff;padding:11px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:600;box-shadow:0 6px 18px rgba(11,105,255,0.18);transition:transform .16s ease,box-shadow .16s ease}
+.rm-btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(11,105,255,0.16)}
+.rm-secondary{background:#fff;border:1px solid #e6eefc;color:#0b69ff}
+.rm-results{margin-top:22px}
+.rm-result-item{display:flex;justify-content:space-between;align-items:center;padding:14px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid #eef6ff;margin-bottom:12px;box-shadow:0 6px 20px rgba(8,29,66,0.04)}
+.rm-result-left strong{display:block;color:#08223f;font-size:15px}
+.rm-branch{font-size:13px;color:#59708a;margin-top:4px}
+.rm-result-right{text-align:right;min-width:140px}
+.rm-percent{font-weight:800;color:#0b69ff;font-size:20px}
+.rm-progress{width:140px;height:10px;background:#eef6ff;border-radius:999px;margin-top:8px;overflow:hidden}
+.rm-progress-fill{height:100%;background:linear-gradient(90deg,#03a9ff,#0b69ff);border-radius:999px;transition:width .6s cubic-bezier(.2,.9,.2,1)}
+.rm-hint{color:#586b88;padding:14px;background:linear-gradient(180deg,#fbfdff,#ffffff);border-radius:10px;border:1px solid #eef6ff}
+@media (max-width:880px){.rm-form{grid-template-columns:1fr}.rm-result-right{min-width:100px}.rm-progress{width:110px}}
+@media (max-width:520px){.rm-container{padding:18px;border-radius:12px}.rm-btn{width:100%}.rm-actions{flex-direction:column} }
