@@ -1,7 +1,15 @@
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
+import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import Landing from './pages/Landing/Landing'
+import HowItWorks from './pages/HowItWorks/HowItWorks'
+import ExploreBranches from './pages/ExploreBranches/ExploreBranches'
+import CareerPaths from './pages/CareerPaths/CareerPaths'
+import Roadmaps from './pages/Roadmaps/Roadmaps'
+import Resources from './pages/Resources/Resources'
+import About from './pages/About/About'
+import Contact from './pages/Contact/Contact'
 import AuthForm from './pages/AuthForm/AuthForm'
 import ProfilePending from './pages/ProfilePending/ProfilePending'
 import ProfileForm from './pages/ProfileForm/ProfileForm'
@@ -62,6 +70,13 @@ function AppContent() {
     <div className="App">
       <Navbar user={user} />
       <Routes>
+        <Route path="/how-it-works" element={<ProtectedRoute user={user}><HowItWorks /></ProtectedRoute>} />
+        <Route path="/branches" element={<ProtectedRoute user={user}><ExploreBranches /></ProtectedRoute>} />
+        <Route path="/career-paths" element={<ProtectedRoute user={user}><CareerPaths /></ProtectedRoute>} />
+        <Route path="/roadmaps" element={<ProtectedRoute user={user}><Roadmaps /></ProtectedRoute>} />
+        <Route path="/resources" element={<ProtectedRoute user={user}><Resources /></ProtectedRoute>} />
+        <Route path="/about" element={<ProtectedRoute user={user}><About /></ProtectedRoute>} />
+        <Route path="/contact" element={<ProtectedRoute user={user}><Contact /></ProtectedRoute>} />
         <Route path="/" element={<Landing />} />
         <Route 
           path="/auth" 
